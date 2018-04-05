@@ -4,6 +4,10 @@ public class Main {
     public static int anoBissexto;
     public static int dataReferencia;
     public static int diaSemana;
+    
+    public static int diaInteresse;
+    public static int mesInteresse;
+    public static int anoInteresse;
     public static void main(String[] args) {
 	// TODO Auto-generated method stub
 	int i;
@@ -29,23 +33,87 @@ public class Main {
 	if(dataInteresse == dataReferencia) {
 	    System.exit(diaSemana);
 	}
-    }
-    public static int avancaData(int data) {
-	int dataI = dataInteresse;
-	int dataR = dataReferencia;
-	int anoInteresse = dataInteresse / 10000;
-	int mesInteresse = (dataInteresse % 10000) /100;
-	int diaInteresse = dataInteresse % 100;
+	anoInteresse = dataInteresse / 10000;
+	mesInteresse = (dataInteresse % 10000) /100;
+	diaInteresse = dataInteresse % 100;
+	if(dataInteresse < dataReferencia) {
+	    avancaData();
+	}
+	if(dataInteresse > dataReferencia){
+	    retrocedeData();
+	}
+	System.exit(diaSemana);
 	
+    }
+    public static void retrocedeData() {
 	int anoReferencia = dataReferencia / 10000;
 	int mesReferencia = (dataReferencia % 10000) /100;
 	int diaReferencia = dataReferencia % 100;
 	while(anoInteresse != anoReferencia && mesInteresse != mesReferencia && diaInteresse != diaReferencia) {
-	    
-	    1234.12.10
-	    1233.09.01 = 0
+	    retrocedeDia();
+	    retrocedeDiaSemana();
 	}
-	return data;
+    }
+    public static void retrocedeDia() {
+	if(diaInteresse > 1) {
+	    diaInteresse--;
+	    return;
+	}
+	if(diaInteresse == 1 && mesInteresse == 3) {
+	    if(isBissexto(anoInteresse)) {
+		diaInteresse = 29;
+		mesInteresse = 2;
+		return;
+	    }
+	    mesInteresse = 2;
+	    diaInteresse = 28;
+	    return;
+	}
+	if(diaInteresse == 1) {
+	    if(mesInteresse == 4 || mesInteresse == 6 || mesInteresse == 9 || mesInteresse == 11) {
+		retrocedeMes();
+		diaInteresse = 31;
+		return;
+	    }
+	    else {
+		diaInteresse = 30;
+		return;
+	    }
+	}
+    }
+    public static void retrocedeMes() {
+	if(mesInteresse > 1) {
+	    mesInteresse --;
+	}
+	else {
+	    mesInteresse = 12;
+	    anoInteresse --;
+	}
+    }
+    public static void retrocedeDiaSemana() {
+	if(diaSemana > 0) {
+	    diaSemana --;
+	}
+	else {
+	    diaSemana = 6;
+	}
+    }
+    public static void avancaData() {
+	int anoReferencia = dataReferencia / 10000;
+	int mesReferencia = (dataReferencia % 10000) /100;
+	int diaReferencia = dataReferencia % 100;
+	while(anoInteresse != anoReferencia && mesInteresse != mesReferencia && diaInteresse != diaReferencia) {
+	    avancaDia();
+	    avancaDiaSemana();
+	}
+    }
+    public static void avancaDiaSemana() {
+	if(diaSemana < 6) {
+	    diaSemana ++;
+	}
+	else {
+	    diaSemana = 0;
+	}
     }
     public static int stringToInt(String texto) {
 	try {
@@ -64,12 +132,62 @@ public class Main {
 	int mes = (data % 10000) /100;
 	int dia = data % 100;
 	
-	if(ano < 1000 || mes == 0 || mes > 12 || validaDia(ano,mes,dia)) {
+	if(ano < 1000 || mes == 0 || mes > 12 || !validaDia(ano,mes,dia)) {
 	    return false;
 	}
 	return true;
     }
+    public static void avancaDia() {
+	if(diaInteresse < 30 && mesInteresse != 2) {
+	    diaInteresse++;
+	    return;
+	}
+	if(diaInteresse == 28 && mesInteresse == 2) {
+	    if(isBissexto(anoInteresse)) {
+		diaInteresse = 29;
+		return;
+	    }
+	    mesInteresse = 3;
+	    diaInteresse = 1;
+	    return;
+	}
+	if(diaInteresse == 29 && mesInteresse == 2) {
+	    avancaMes();
+	    diaInteresse = 1;
+	    return;
+	}
+	if(diaInteresse == 31) {
+	    avancaMes();
+	    diaInteresse = 1;
+	    return;
+	}
+	if(diaInteresse == 30) {
+	    if(mesInteresse == 4 || mesInteresse == 6 || mesInteresse == 9 || mesInteresse == 11) {
+		avancaMes();
+		diaInteresse = 1;
+		return;
+	    }
+	    else {
+		diaInteresse = 31;
+		return;
+	    }
+	}
+	else {
+	    avancaMes();
+	    diaInteresse = 1;
+	}
+    }
+    
+    public static void avancaMes() {
+	if(mesInteresse < 12) {
+	    mesInteresse ++;
+	    return;
+	}
+	mesInteresse = 1;
+	anoInteresse ++;
+    }
     public static boolean validaDia(int ano, int mes, int dia) {
+	
 	if(dia < 29 && dia != 0) {
 	    return true;
 	}
