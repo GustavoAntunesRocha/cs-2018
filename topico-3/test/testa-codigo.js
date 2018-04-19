@@ -3,9 +3,8 @@ const operacao = require("../codigo");
 
 QUnit.test("Ordenacao", function (assert) {
 
-  // Executa a operação que desejamos testar
   let resultado = operacao.ordena("casa");
-
-  // Verifica se o resultado produzido é o esperado.
+  let resultado2 = operacao.ordena("o joao foi na padaria");
   assert.equal(resultado, "aacs", "ordenacao correta");
+  assert.equal(resultado2, "aaaaadfiijnoooopr", "ordenacao correta");
 });
