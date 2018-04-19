@@ -9,7 +9,6 @@ function ordena(str){
     
     var str3 = [];
     var str4 = "";
-    console.log(str2);
     for(i=0;i<str2.length;i++){
         str3.push(str2.charAt(i));
         
