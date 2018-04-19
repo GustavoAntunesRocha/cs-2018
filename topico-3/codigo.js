@@ -20,6 +20,5 @@ function ordena(str){
     }
     return str4;
 }
-console.log(trim("ca sa"));
-console.log(ordena("casa"));
+
 exports.ordena = ordena;
