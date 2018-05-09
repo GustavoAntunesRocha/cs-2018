@@ -1,5 +1,5 @@
 /** @namespace */
-class DiaDaSemana{
+export class DiaDaSemana{
     /**
      * Um algoritmo que define o dia da semana para uma determinada data de Kim Larsen
      * @param {number} d Dia
