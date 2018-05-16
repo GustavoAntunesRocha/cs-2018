@@ -1,5 +1,5 @@
 {
-  "name": "dia_da_semana",
+  "name": "dia_da_semana_gustavo",
   "version": "1.0.0",
   "description": "Informa o dia da semana passando uma data como parametro",
   "main": "diaDaSemana.js",
