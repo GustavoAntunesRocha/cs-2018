@@ -1,0 +1,24 @@
+{
+  "name": "dia_da_semana",
+  "version": "1.0.0",
+  "description": "Informa o dia da semana passando uma data como parametro",
+  "main": "diaDaSemana.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "qunit test/tests.js"
+  },
+  "keywords": [
+    "diadasemana"
+  ],
+  "author": "Gustavo Antunes",
+  "license": "ISC"
+}
