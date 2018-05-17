@@ -1,4 +1,4 @@
-import { DiaDaSemana } from "diaDaSemana";
+import { DiaDaSemana } from "./diaDaSemana.js";
 const diaSemana = new DiaDaSemana();
 const dia = parseInt(process.argv[2]);
 const mes = parseInt(process.argv[3]);
