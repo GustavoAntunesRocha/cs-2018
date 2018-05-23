@@ -16,3 +16,5 @@ function resto(x,y){
     }
     return s;
 }
+
+exports.resto = resto;
