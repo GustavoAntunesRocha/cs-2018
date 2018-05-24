@@ -1,0 +1,29 @@
+{
+  "name": "resto-divisao-gustavo",
+  "version": "1.0.0",
+  "description": "Retorna o resto da divisao inteira",
+  "main": "resto.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "qunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoAntunesRocha/cs-2018.git"
+  },
+  "keywords": [
+    "resto",
+    "divisao"
+  ],
+  "author": "Gustavo Antunes Rocha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GustavoAntunesRocha/cs-2018/issues"
+  },
+  "homepage": "https://github.com/GustavoAntunesRocha/cs-2018#readme",
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1"
+  }
+}
