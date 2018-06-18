@@ -1,5 +1,5 @@
 /*Gustavo Antunes Rocha*/
-const operacao = require("../produto-dois-inteiros-usando-soma");
+const operacao = require("./produto-dois-inteiros-usando-soma");
 /**
  * @param {number} x
  * @param {number} y
@@ -17,4 +17,5 @@ function potencia(x,y){
     }
     return potencia;
 }
+console.log(potencia(2,10));
 exports.potencia = potencia;
