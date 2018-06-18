@@ -9,12 +9,12 @@ function somaNaturais(n){
     if(n < 1){
         return 1;
     }
-    var i = 2;
-    var s = 1;
+    var i = 1;
+    var s = 0;
     while(i <= n){
         s += i;
-        i += i;
+        i += 1;
     }
     return s;
 }
-exports.somaNaturais = SomaNaturais;
+exports.somaNaturais = somaNaturais;
