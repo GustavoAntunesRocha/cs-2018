@@ -1,7 +1,7 @@
 /*Gustavo Antunes Rocha*/
 /**
  * @param {number} n
- * @returns {number} Se n é um quadrado perfeito
+ * @returns {boolean} Se n é um quadrado perfeito
  */
 function quadradoPerfeito(n){
     if(n < 1){
