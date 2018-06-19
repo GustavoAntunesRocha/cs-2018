@@ -14,7 +14,7 @@ function pi(n){
     while(i <= n){
         d += 2;
         s *= -1;
-        p += 4 * s / d;
+        p += (4 * s) / d;
         i++;
     }
     return p;
