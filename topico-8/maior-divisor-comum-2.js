@@ -2,7 +2,7 @@
 /**
  * @param {number} a
  * @param {number} b
- * @returns {boolean} O maior divisor comum entre a e b
+ * @returns {number} O maior divisor comum entre a e b
  */
 function mdc2(a,b){
     if(a < b || b <= 0){
