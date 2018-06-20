@@ -6,7 +6,7 @@
 function crivoErastotenes(n){
     a = new Array(n);
     var i;
-    for(i=0;i<n;i++){
+    for(i=0;i<=n;i++){
         a[i] = 0;
     }
     var limite = Math.sqrt(n);
