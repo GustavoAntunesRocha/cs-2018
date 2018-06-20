@@ -1,7 +1,8 @@
 /*Gustavo Antunes Rocha*/
 /**
- * @param {number} n
- * @returns {boolean} Se n é um numero primo
+ * @param {number} a
+ * @param {number} b
+ * @returns {boolean} O maior divisor comum entre a e b
  */
 function mdc(a,b){
     if(a < b || b <= 0){
