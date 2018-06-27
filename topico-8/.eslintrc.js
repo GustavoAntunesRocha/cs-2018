@@ -14,7 +14,7 @@ module.exports = {
         "arrow-spacing": "error",
         "block-scoped-var": "error",
         "block-spacing": "error",
-        "brace-style": "error",
+        "brace-style": "off",
         "callback-return": "error",
         "camelcase": "error",
         "capitalized-comments": [
@@ -23,7 +23,7 @@ module.exports = {
         ],
         "class-methods-use-this": "error",
         "comma-dangle": "error",
-        "comma-spacing": "error",
+        "comma-spacing": "off",
         "comma-style": "error",
         "complexity": "error",
         "computed-property-spacing": [
@@ -137,10 +137,10 @@ module.exports = {
         "no-new-require": "error",
         "no-new-wrappers": "error",
         "no-octal-escape": "error",
-        "no-param-reassign": "error",
+        "no-param-reassign": "warn",
         "no-path-concat": "error",
         "no-plusplus": [
-            "error",
+            "off",
             {
                 "allowForLoopAfterthoughts": true
             }

@@ -4,7 +4,7 @@
  * @param {number} b
  * @returns {number} O maior divisor comum entre a e b
  */
-function mdc2(a,b){
+function mdc2(a, b){
     if(a < b || b <= 0){
         return -1;
     }

@@ -10,7 +10,7 @@ function raiz(n,i){
     }
     var r = 1;
     while(i >= 0){
-        r = (r + n / r) / 2;
+        r = (r + (n / r)) / 2;
         i--;
     }
     return r;
