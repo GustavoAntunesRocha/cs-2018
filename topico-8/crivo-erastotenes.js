@@ -4,7 +4,7 @@
  * @returns {boolean} Se n é um numero primo
  */
 function crivoErastotenes(n){
-    a = new Array(n);
+    var a = new Array(n);
     var i;
     for(i=0;i<=n;i++){
         a[i] = 0;
