@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: produto-dois-inteiros-usando-soma.js</title>
+    <title>JSDoc: Source: crivo-erastotenes.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: produto-dois-inteiros-usando-soma.js</h1>
+    <h1 class="page-title">Source: crivo-erastotenes.js</h1>
 
     
 
@@ -28,29 +28,32 @@
         <article>
             <pre class="prettyprint source linenums"><code>/*Gustavo Antunes Rocha*/
 /**
- * @param {number} a
- * @param {number} b
- * @returns {number} O produto de a e b
+ * @param {number} n
+ * @returns {boolean} Se n é um numero primo
  */
-function produto(a,b){
-    if(a &lt; 0 || b &lt; 0){
-        return 1;
+function crivoErastotenes(n){
+    a = new Array(n);
+    var i;
+    for(i=0;i&lt;=n;i++){
+        a[i] = 0;
     }
-    var totalParcelas = a;
-    var parcela = b;
-    if(b &lt; a){
-        totalParcelas = b;
-        parcela = a;
+    var limite = Math.sqrt(n);
+    var multiplo;
+    for(i=2;i &lt;= limite;i++){
+        if(a[i] == 0){
+            multiplo = i + i;
+            while(multiplo &lt;= n){
+                a[multiplo] = 1;
+                multiplo += i;
+            }
+        }
     }
-    var i = 1;
-    var s = 0;
-    while(i &lt;= totalParcelas){
-        s += parcela;
-        i++;
+    if(a[n] == 0){
+        return true;
     }
-    return s;
+    return false;
 }
-exports.produto = produto;</code></pre>
+exports.crivoErastotenes = crivoErastotenes;</code></pre>
         </article>
     </section>
 

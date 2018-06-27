@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: produto-dois-inteiros-usando-soma.js</title>
+    <title>JSDoc: Source: valor-pi.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: produto-dois-inteiros-usando-soma.js</h1>
+    <h1 class="page-title">Source: valor-pi.js</h1>
 
     
 
@@ -28,29 +28,26 @@
         <article>
             <pre class="prettyprint source linenums"><code>/*Gustavo Antunes Rocha*/
 /**
- * @param {number} a
- * @param {number} b
- * @returns {number} O produto de a e b
+ * @param {number} n
+ * @returns {number} O valor de pi
  */
-function produto(a,b){
-    if(a &lt; 0 || b &lt; 0){
-        return 1;
-    }
-    var totalParcelas = a;
-    var parcela = b;
-    if(b &lt; a){
-        totalParcelas = b;
-        parcela = a;
+function pi(n){
+    if(n &lt; 1){
+        return -1;
     }
     var i = 1;
-    var s = 0;
-    while(i &lt;= totalParcelas){
-        s += parcela;
+    var s = -1;
+    var d = -1;
+    var p = 0;
+    while(i &lt;= n){
+        d += 2;
+        s *= -1;
+        p += (4 * s) / d;
         i++;
     }
-    return s;
+    return p;
 }
-exports.produto = produto;</code></pre>
+exports.pi = pi;</code></pre>
         </article>
     </section>
 

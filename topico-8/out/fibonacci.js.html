@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: produto-dois-inteiros-usando-soma.js</title>
+    <title>JSDoc: Source: fibonacci.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: produto-dois-inteiros-usando-soma.js</h1>
+    <h1 class="page-title">Source: fibonacci.js</h1>
 
     
 
@@ -28,29 +28,25 @@
         <article>
             <pre class="prettyprint source linenums"><code>/*Gustavo Antunes Rocha*/
 /**
- * @param {number} a
- * @param {number} b
- * @returns {number} O produto de a e b
+ * @param {number} n
+ * @returns {number} n-esimo numero de fibonacci
  */
-function produto(a,b){
-    if(a &lt; 0 || b &lt; 0){
-        return 1;
+function fibonacci(n){
+    var a = 0;
+    var c = 1;
+    if(n == 0 || n == 1){
+        return n;
     }
-    var totalParcelas = a;
-    var parcela = b;
-    if(b &lt; a){
-        totalParcelas = b;
-        parcela = a;
+    var i;
+    var t;
+    for(i = 2;i &lt;= n;i++){
+        t = c;
+        c += a;
+        a = t;
     }
-    var i = 1;
-    var s = 0;
-    while(i &lt;= totalParcelas){
-        s += parcela;
-        i++;
-    }
-    return s;
+    return c;
 }
-exports.produto = produto;</code></pre>
+exports.fibonacci = fibonacci;</code></pre>
         </article>
     </section>
 

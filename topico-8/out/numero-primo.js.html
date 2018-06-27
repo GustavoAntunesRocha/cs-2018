@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: produto-dois-inteiros-usando-soma.js</title>
+    <title>JSDoc: Source: numero-primo.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: produto-dois-inteiros-usando-soma.js</h1>
+    <h1 class="page-title">Source: numero-primo.js</h1>
 
     
 
@@ -28,29 +28,23 @@
         <article>
             <pre class="prettyprint source linenums"><code>/*Gustavo Antunes Rocha*/
 /**
- * @param {number} a
- * @param {number} b
- * @returns {number} O produto de a e b
+ * @param {number} n
+ * @returns {boolean} Se n é um numero primo
  */
-function produto(a,b){
-    if(a &lt; 0 || b &lt; 0){
-        return 1;
+function primo(n){
+    if(n &lt;= 1){
+        return false;
     }
-    var totalParcelas = a;
-    var parcela = b;
-    if(b &lt; a){
-        totalParcelas = b;
-        parcela = a;
-    }
-    var i = 1;
-    var s = 0;
-    while(i &lt;= totalParcelas){
-        s += parcela;
+    var i = 2;
+    while(i &lt; n){
+        if(n % i == 0){
+            return false;
+        }
         i++;
     }
-    return s;
+    return true;
 }
-exports.produto = produto;</code></pre>
+exports.primo = primo;</code></pre>
         </article>
     </section>
 

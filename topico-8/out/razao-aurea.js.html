@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: produto-dois-inteiros-usando-soma.js</title>
+    <title>JSDoc: Source: razao-aurea.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: produto-dois-inteiros-usando-soma.js</h1>
+    <h1 class="page-title">Source: razao-aurea.js</h1>
 
     
 
@@ -28,29 +28,28 @@
         <article>
             <pre class="prettyprint source linenums"><code>/*Gustavo Antunes Rocha*/
 /**
- * @param {number} a
- * @param {number} b
- * @returns {number} O produto de a e b
+ * @param {number} x
+ * @param {number} y
+ * @param {number} k
+ * @returns {number} A razao aurea
  */
-function produto(a,b){
-    if(a &lt; 0 || b &lt; 0){
-        return 1;
+function razaoAurea(x,y,k){
+    if(x &lt; 0 || x > y || k &lt;= 0){
+        return -1;
     }
-    var totalParcelas = a;
-    var parcela = b;
-    if(b &lt; a){
-        totalParcelas = b;
-        parcela = a;
-    }
+    var c = y;
+    var a = x;
     var i = 1;
-    var s = 0;
-    while(i &lt;= totalParcelas){
-        s += parcela;
+    var t;
+    while(i &lt;= k){
+        t = c;
+        c += a;
+        a = t;
         i++;
     }
-    return s;
+    return c / a;
 }
-exports.produto = produto;</code></pre>
+exports.razaoAurea = razaoAurea;</code></pre>
         </article>
     </section>
 

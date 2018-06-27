@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: produto-dois-inteiros-usando-soma.js</title>
+    <title>JSDoc: Source: potencia-usando-somas.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: produto-dois-inteiros-usando-soma.js</h1>
+    <h1 class="page-title">Source: potencia-usando-somas.js</h1>
 
     
 
@@ -27,30 +27,26 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/*Gustavo Antunes Rocha*/
+const operacao = require("./produto-dois-inteiros-usando-soma");
 /**
- * @param {number} a
- * @param {number} b
- * @returns {number} O produto de a e b
+ * @param {number} x
+ * @param {number} y
+ * @returns {number} O valor de x elevado a y
  */
-function produto(a,b){
-    if(a &lt; 0 || b &lt; 0){
-        return 1;
+function potencia(x,y){
+    if(x &lt; 0 || y &lt; 0){
+        return -1;
     }
-    var totalParcelas = a;
-    var parcela = b;
-    if(b &lt; a){
-        totalParcelas = b;
-        parcela = a;
-    }
+    var potencia = 1;
     var i = 1;
-    var s = 0;
-    while(i &lt;= totalParcelas){
-        s += parcela;
+    while(i &lt;= y){
+        potencia = operacao.produto(potencia, x);
         i++;
     }
-    return s;
+    return potencia;
 }
-exports.produto = produto;</code></pre>
+console.log(potencia(2,10));
+exports.potencia = potencia;</code></pre>
         </article>
     </section>
 

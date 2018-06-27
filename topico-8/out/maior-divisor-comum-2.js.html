@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: produto-dois-inteiros-usando-soma.js</title>
+    <title>JSDoc: Source: maior-divisor-comum-2.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: produto-dois-inteiros-usando-soma.js</h1>
+    <h1 class="page-title">Source: maior-divisor-comum-2.js</h1>
 
     
 
@@ -30,27 +30,23 @@
 /**
  * @param {number} a
  * @param {number} b
- * @returns {number} O produto de a e b
+ * @returns {number} O maior divisor comum entre a e b
  */
-function produto(a,b){
-    if(a &lt; 0 || b &lt; 0){
-        return 1;
+function mdc2(a,b){
+    if(a &lt; b || b &lt;= 0){
+        return -1;
     }
-    var totalParcelas = a;
-    var parcela = b;
-    if(b &lt; a){
-        totalParcelas = b;
-        parcela = a;
+    while(a != b){
+        if(a > b){
+            a -= b;
+        }
+        else{
+            b -= a;
+        }
     }
-    var i = 1;
-    var s = 0;
-    while(i &lt;= totalParcelas){
-        s += parcela;
-        i++;
-    }
-    return s;
+    return a;
 }
-exports.produto = produto;</code></pre>
+exports.mdc2 = mdc2;</code></pre>
         </article>
     </section>
 
