@@ -10,16 +10,22 @@ function cpf(d){
             return false;
         }
     }
-    var j;
-    for(i=1;i<=9;i++){
-        j += d[i];
+    var j = 0;
+    for(i=0;i<9;i++){
+        j += d[i] * (10-i);
     }
-    var k;
-    for(i=2;i<=10;i++){
-        k += d[i];
+    var k = 0;
+    for(i=0;i<10;i++){
+        k += d[i] * (11-i);
     }
-    var dj = (j % 11) % 10;
-    var dk = (k % 11) % 10;
+    var dj = (j * 10) % 11;
+    if(dj == 10|| dj == 11){
+        dj = 0;
+    }
+    var dk = (k * 10) % 11;
+    if(dk == 10 || dk == 11){
+        dk = 0;
+    }
     return dj == d[9] && dk == d[10];
 }
 exports.cpf = cpf;
