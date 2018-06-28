@@ -1,8 +1,8 @@
 {
-  "name": "topico-8-gustavo",
+  "name": "topico-8-gustavo-antunes-rocha",
   "version": "1.0.0",
-  "description": "Colecao de algoritmos",
-  "main": "cpf-1.js",
+  "description": "Colecao de algoritmos para faculdade",
+  "main": ".eslintrc.js",
   "directories": {
     "test": "test"
   },
@@ -10,12 +10,5 @@
     "test": "qunit"
   },
   "author": "Gustavo Antunes Rocha",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0"
-  }
+  "license": "ISC"
 }
